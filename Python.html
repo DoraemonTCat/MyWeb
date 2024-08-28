@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นฐานของ Python</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header01 {
+            background-color: gray;
+            width: 70px;
+            border: 2px solid lavender;
+            border-radius: 15px;
+        }
+        .header01 a {
+            text-align: left;
+            text-decoration: none;
+            color: #fff;
+            font-size: larger;
+            margin-left: 10px;
+            padding-right: 6px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #333;
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .content pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #333;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button-container a {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>พื้นฐานของ Python</h1>
+        <div class="header01"><a href="file:///D:/โค๊ต/HTML/Script/Homework.html">Home</a></div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>Python คืออะไร?</h2>
+            <p>Python เป็นภาษาโปรแกรมที่ได้รับความนิยมสูงและถูกพัฒนาโดย Guido van Rossum ภาษา Python ถูกออกแบบมาให้มีไวยากรณ์ที่อ่านง่ายและสะดวกสำหรับการเขียนโปรแกรม สามารถใช้งานได้ในหลากหลายประเภทของโปรเจ็กต์ เช่น การพัฒนาเว็บ, การวิเคราะห์ข้อมูล, และการพัฒนาแอปพลิเคชัน</p>
+
+            <h2>จุดเด่นของ Python</h2>
+            <p>Python มีจุดเด่นหลายประการ เช่น ความง่ายในการอ่านและเขียนโค้ด, การสนับสนุนการพัฒนาซอฟต์แวร์ได้หลากหลายประเภท, และมีไลบรารีและเฟรมเวิร์กที่ครอบคลุมสำหรับการทำงานต่างๆ รวมถึงการพัฒนา Web Application และ Data Analysis</p>
+
+            <h2>คำสั่งพื้นฐานใน Python</h2>
+
+            <h3>1. การใช้คำสั่ง <code>if</code> และ <code>else</code></h3>
+            <p>คำสั่ง <code>if</code> และ <code>else</code> ใช้ในการตัดสินใจว่าจะแสดงผลลัพธ์ใดขึ้นอยู่กับเงื่อนไขที่กำหนด:</p>
+            <pre>
+number = 10
+
+if number > 0:
+    print("Number is positive.")
+elif number < 0:
+    print("Number is negative.")
+else:
+    print("Number is zero.")
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะตรวจสอบค่าของตัวแปร <code>number</code> และพิมพ์ข้อความที่เหมาะสมออกมา</p>
+
+            <h3>2. การใช้คำสั่ง <code>for</code></h3>
+            <p>คำสั่ง <code>for</code> ใช้ในการทำงานวนลูปโดยรู้จำนวนรอบที่ต้องการ:</p>
+            <pre>
+for i in range(1, 6):
+    print("Iteration", i)
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะพิมพ์ข้อความ "Iteration" ตามด้วยหมายเลขลูปตั้งแต่ 1 ถึง 5</p>
+
+            <h3>3. การใช้คำสั่ง <code>while</code></h3>
+            <p>คำสั่ง <code>while</code> ใช้ในการทำงานวนลูปตราบใดที่เงื่อนไขยังเป็นจริง:</p>
+            <pre>
+i = 1
+while i <= 5:
+    print("Iteration", i)
+    i += 1
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะทำการพิมพ์ข้อความ "Iteration" ตามด้วยหมายเลขลูปตั้งแต่ 1 ถึง 5 เช่นเดียวกับคำสั่ง <code>for</code></p>
+
+            <h3>4. การใช้คำสั่ง <code>switch</code> (โดยใช้ <code>match</code> ใน Python 3.10 ขึ้นไป)</h3>
+            <p>ใน Python รุ่นก่อนหน้าไม่มีคำสั่ง <code>switch</code> แต่ใน Python 3.10 ขึ้นไปมีการเพิ่มคำสั่ง <code>match</code> ซึ่งทำหน้าที่คล้ายกัน:</p>
+            <pre>
+day = 3
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid day")
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะพิมพ์ชื่อของวันในสัปดาห์ตามค่าของตัวแปร <code>day</code> โดยใช้คำสั่ง <code>match</code></p>
+
+        </div>
+
+        <div class="button-container">
+            <a href="https://www.w3schools.com/python/default.asp" >เรียนรู้เพิ่มเติมเกี่ยวกับ Python</a>
+        </div>
+        
+        <div class="button-container">
+            <a href="file:///D:/โค๊ต/HTML/Script/Homework.html">กลับสู่หน้าแรก</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นฐานของ C++</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header01 {
+            background-color: gray;
+            width: 70px;
+            border: 2px solid lavender;
+            border-radius: 15px;
+            padding-right: 6px;
+        }
+        .header01 a {
+            text-align: left;
+            text-decoration: none;
+            color: #fff;
+            font-size: larger;
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #333;
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .content pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #333;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button-container a {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>พื้นฐานของ C++</h1>
+        <div class="header01"><a href="file:///D:/โค๊ต/HTML/Script/Homework.html">Home</a></div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>C++ คืออะไร?</h2>
+            <p>C++ เป็นภาษาการเขียนโปรแกรมที่พัฒนาขึ้นจากภาษา C โดยเพิ่มคุณสมบัติของการเขียนโปรแกรมเชิงวัตถุ (Object-Oriented Programming) เข้ามา C++ ใช้สำหรับการพัฒนาแอปพลิเคชันต่างๆ รวมถึงระบบปฏิบัติการ เกม และซอฟต์แวร์ประสิทธิภาพสูง</p>
+
+            <h2>จุดเด่นของ C++</h2>
+            <p>C++ มีจุดเด่นในการรองรับการเขียนโปรแกรมเชิงวัตถุ, ความสามารถในการจัดการหน่วยความจำ, และประสิทธิภาพที่สูง นอกจากนี้ยังสามารถใช้ในการพัฒนาแอปพลิเคชันที่ต้องการประสิทธิภาพและการควบคุมที่แม่นยำ</p>
+
+            <h2>คำสั่งพื้นฐานใน C++</h2>
+
+            <h3>1. การใช้คำสั่ง <code>if</code> และ <code>else</code></h3>
+            <p>คำสั่ง <code>if</code> และ <code>else</code> ใช้ในการตัดสินใจว่าจะทำการดำเนินการใดขึ้นอยู่กับเงื่อนไขที่กำหนด:</p>
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int number = 10;
+
+    if (number > 0) {
+        cout &lt;&lt; "Number is positive." &lt;&lt; endl;
+    } else if (number < 0) {
+        cout &lt;&lt; "Number is negative." &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Number is zero." &lt;&lt; endl;
+    }
+
+    return 0;
+}
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะตรวจสอบค่าของตัวแปร <code>number</code> และพิมพ์ข้อความที่เหมาะสมออกมา</p>
+
+            <h3>2. การใช้คำสั่ง <code>for</code></h3>
+            <p>คำสั่ง <code>for</code> ใช้ในการทำงานวนลูปโดยรู้จำนวนรอบที่ต้องการ:</p>
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        cout &lt;&lt; "Iteration " &lt;&lt; i &lt;&lt; endl;
+    }
+
+    return 0;
+}
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะพิมพ์ข้อความ "Iteration" ตามด้วยหมายเลขลูปตั้งแต่ 1 ถึง 5</p>
+
+            <h3>3. การใช้คำสั่ง <code>while</code></h3>
+            <p>คำสั่ง <code>while</code> ใช้ในการทำงานวนลูปตราบใดที่เงื่อนไขยังเป็นจริง:</p>
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int i = 1;
+    while (i <= 5) {
+        cout &lt;&lt; "Iteration " &lt;&lt; i &lt;&lt; endl;
+        i++;
+    }
+
+    return 0;
+}
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะทำการพิมพ์ข้อความ "Iteration" ตามด้วยหมายเลขลูปตั้งแต่ 1 ถึง 5 เช่นเดียวกับคำสั่ง <code>for</code></p>
+
+            <h3>4. การใช้คำสั่ง <code>switch</code></h3>
+            <p>คำสั่ง <code>switch</code> ใช้ในการตรวจสอบค่าของตัวแปรและทำการดำเนินการตามกรณีที่กำหนด:</p>
+            <pre>
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int day = 3;
+
+    switch (day) {
+        case 1:
+            cout &lt;&lt; "Monday" &lt;&lt; endl;
+            break;
+        case 2:
+            cout &lt;&lt; "Tuesday" &lt;&lt; endl;
+            break;
+        case 3:
+            cout &lt;&lt; "Wednesday" &lt;&lt; endl;
+            break;
+        case 4:
+            cout &lt;&lt; "Thursday" &lt;&lt; endl;
+            break;
+        case 5:
+            cout &lt;&lt; "Friday" &lt;&lt; endl;
+            break;
+        case 6:
+            cout &lt;&lt; "Saturday" &lt;&lt; endl;
+            break;
+        case 7:
+            cout &lt;&lt; "Sunday" &lt;&lt; endl;
+            break;
+        default:
+            cout &lt;&lt; "Invalid day" &lt;&lt; endl;
+    }
+
+    return 0;
+}
+            </pre>
+            <p>ในตัวอย่างนี้ โปรแกรมจะพิมพ์ชื่อของวันในสัปดาห์ตามค่าของตัวแปร <code>day</code> โดยใช้คำสั่ง <code>switch</code></p>
+
+        </div>
+
+        <div class="button-container">
+            <a href="https://www.w3schools.com/cpp/default.asp" >เรียนรู้เพิ่มเติมเกี่ยวกับ C++</a>
+        </div>
+    
+        <div class="button-container">
+            <a href="file:///D:/โค๊ต/HTML/Script/Homework.html">กลับสู่หน้าแรก</a>
+        </div>
+    </div>
+
+</body>
+</html>

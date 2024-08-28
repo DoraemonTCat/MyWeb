@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นฐานของ JavaScript</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header01 {
+            background-color: gray;
+            width: 70px;
+            border: 2px solid lavender;
+            border-radius: 15px;
+            padding-right: 6px;
+        }
+        .header01 a {
+            text-align: left;
+            text-decoration: none;
+            color: #fff;
+            font-size: larger;
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #333;
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .content pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #333;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button-container a {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>พื้นฐานของ JavaScript</h1>
+        <div class="header01"><a href="file:///D:/โค๊ต/HTML/Script/Homework.html">Home</a></div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>JavaScript คืออะไร?</h2>
+            <p>JavaScript เป็นภาษาการเขียนโปรแกรมที่ใช้ในการพัฒนาเว็บไซต์ โดยเฉพาะสำหรับการจัดการกับองค์ประกอบต่าง ๆ บนหน้าเว็บและเพิ่มฟังก์ชันต่าง ๆ ที่ไม่สามารถทำได้ด้วย HTML และ CSS เพียงอย่างเดียว โดย JavaScript ทำงานร่วมกับ HTML และ CSS เพื่อสร้างประสบการณ์ที่มีความอินเทอร์แอคทีฟและตอบสนองต่อการกระทำของผู้ใช้ได้อย่างมีประสิทธิภาพ</p>
+
+            <h2>คำสั่งพื้นฐานใน JavaScript</h2>
+
+            <h3>1. การใช้คำสั่ง <code>console.log()</code></h3>
+            <p>คำสั่ง <code>console.log()</code> ใช้สำหรับพิมพ์ข้อความไปยังคอนโซล ซึ่งเป็นเครื่องมือที่ช่วยในการดีบักโปรแกรม:</p>
+            <pre>
+console.log("Hello, World!");
+            </pre>
+            <p>ในตัวอย่างนี้ ข้อความ "Hello, World!" จะถูกพิมพ์ลงในคอนโซล</p>
+
+            <h3>2. การประกาศตัวแปร</h3>
+            <p>สามารถใช้ <code>var</code>, <code>let</code>, หรือ <code>const</code> เพื่อประกาศตัวแปร:</p>
+            <pre>
+let message = "Hello, JavaScript!";
+const pi = 3.14;
+var age = 25;
+            </pre>
+            <p>
+                - <code>let</code> ใช้สำหรับประกาศตัวแปรที่สามารถเปลี่ยนค่าได้<br>
+                - <code>const</code> ใช้สำหรับประกาศตัวแปรที่ไม่สามารถเปลี่ยนค่าได้<br>
+                - <code>var</code> ใช้สำหรับประกาศตัวแปรที่สามารถเปลี่ยนค่าได้ แต่ไม่แนะนำใน ES6 ขึ้นไป
+            </p>
+
+            <h3>3. การใช้คำสั่ง <code>if</code> และ <code>else</code></h3>
+            <p>คำสั่ง <code>if</code> และ <code>else</code> ใช้ในการตัดสินใจตามเงื่อนไข:</p>
+            <pre>
+let number = 10;
+
+if (number > 0) {
+    console.log("Number is positive.");
+} else if (number < 0) {
+    console.log("Number is negative.");
+} else {
+    console.log("Number is zero.");
+}
+            </pre>
+            <p>โปรแกรมนี้จะตรวจสอบค่าของตัวแปร <code>number</code> และพิมพ์ข้อความที่เหมาะสมตามเงื่อนไขที่กำหนด</p>
+
+            <h3>4. การใช้คำสั่ง <code>for</code></h3>
+            <p>คำสั่ง <code>for</code> ใช้สำหรับการวนลูปในจำนวนรอบที่กำหนด:</p>
+            <pre>
+for (let i = 1; i <= 5; i++) {
+    console.log("Iteration " + i);
+}
+            </pre>
+            <p>โปรแกรมนี้จะพิมพ์ข้อความ "Iteration" ตามด้วยหมายเลขลูปตั้งแต่ 1 ถึง 5</p>
+
+            <h3>5. การใช้คำสั่ง <code>while</code></h3>
+            <p>คำสั่ง <code>while</code> ใช้สำหรับการวนลูปตราบใดที่เงื่อนไขยังเป็นจริง:</p>
+            <pre>
+let i = 1;
+while (i <= 5) {
+    console.log("Iteration " + i);
+    i++;
+}
+            </pre>
+            <p>โปรแกรมนี้จะทำการพิมพ์ข้อความ "Iteration" ตามด้วยหมายเลขลูปตั้งแต่ 1 ถึง 5 เช่นเดียวกับคำสั่ง <code>for</code></p>
+
+            <h3>6. การใช้คำสั่ง <code>switch</code></h3>
+            <p>คำสั่ง <code>switch</code> ใช้สำหรับการตรวจสอบค่าของตัวแปรและดำเนินการตามกรณีที่กำหนด:</p>
+            <pre>
+let day = 3;
+
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
+}
+            </pre>
+            <p>โปรแกรมนี้จะพิมพ์ชื่อของวันในสัปดาห์ตามค่าของตัวแปร <code>day</code> โดยใช้คำสั่ง <code>switch</code></p>
+
+            <h3>7. การประกาศฟังก์ชัน</h3>
+            <p>ฟังก์ชันใน JavaScript ใช้สำหรับการรวบรวมกลุ่มของคำสั่งที่ต้องการทำงานร่วมกัน:</p>
+            <pre>
+function greet(name) {
+    return "Hello, " + name + "!";
+}
+
+console.log(greet("Alice"));
+            </pre>
+            <p>ฟังก์ชัน <code>greet</code> จะรับชื่อและส่งคืนข้อความทักทาย</p>
+
+            <h3>8. การทำงานกับอาร์เรย์</h3>
+            <p>อาร์เรย์เป็นรายการของค่า:</p>
+            <pre>
+let fruits = ["Apple", "Banana", "Cherry"];
+
+fruits.forEach(function(fruit) {
+    console.log(fruit);
+});
+            </pre>
+            <p>โปรแกรมนี้จะพิมพ์ชื่อผลไม้ทั้งหมดในอาร์เรย์ <code>fruits</code></p>
+
+            <h3>9. การจัดการกับอ็อบเจ็กต์</h3>
+            <p>อ็อบเจ็กต์ใน JavaScript ใช้สำหรับเก็บข้อมูลที่มีลักษณะเป็นคู่ของชื่อและค่า:</p>
+            <pre>
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    greet: function() {
+        return "Hello, " + this.firstName + " " + this.lastName;
+    }
+};
+
+console.log(person.greet());
+            </pre>
+            <p>ในตัวอย่างนี้ อ็อบเจ็กต์ <code>person</code> มีคุณสมบัติ <code>firstName</code>, <code>lastName</code>, และ <code>age</code> และมีเมธอด <code>greet</code> ที่ส่งคืนข้อความทักทาย</p>
+        </div>
+
+        <div class="button-container">
+            <a href="https://www.w3schools.com/js/default.asp" >เรียนรู้เพิ่มเติมเกี่ยวกับ javascript</a>
+        </div>
+        
+        <div class="button-container">
+            <a href="file:///D:/โค๊ต/HTML/Script/Homework.html">กลับสู่หน้าแรก</a>
+        </div>
+    </div>
+
+</body>
+</html>

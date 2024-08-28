@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นฐานของ HTML</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header01 {
+            background-color: gray;
+            width: 70px;
+            border: 2px solid lavender;
+            border-radius: 15px;
+            padding-right: 6px;
+        }
+        .header01 a {
+            text-align: left;
+            text-decoration: none;
+            color: #fff;
+            font-size: larger;
+            margin-left: 10px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #333;
+            font-size: 2em;
+            margin-top: 0;
+        }
+        .content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .content pre {
+            background: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #333;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button-container a {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>พื้นฐานของ HTML</h1>
+        <div class="header01"><a href="file:///D:/โค๊ต/HTML/Script/Homework.html">Home</a></div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h2>HTML คืออะไร?</h2>
+            <p>HTML (HyperText Markup Language) เป็นภาษาเครื่องหมายที่ใช้ในการสร้างและจัดรูปแบบเอกสารบนเว็บ HTML เป็นพื้นฐานของเว็บเพจทุกชนิดและใช้ในการสร้างโครงสร้างของเว็บ เช่น หัวเรื่อง, พารากราฟ, ลิงค์, และรูปภาพ</p>
+
+            <h2>จุดเด่นของ HTML</h2>
+            <p>HTML มีจุดเด่นในการสร้างเอกสารที่มีโครงสร้างชัดเจนและสามารถจัดรูปแบบข้อมูลต่างๆ บนเว็บได้อย่างง่ายดาย นอกจากนี้ HTML ยังสามารถใช้ร่วมกับ CSS และ JavaScript เพื่อเพิ่มการจัดรูปแบบและฟังก์ชันการทำงานให้กับเว็บเพจได้</p>
+
+            <h2>โครงสร้างพื้นฐานของเอกสาร HTML</h2>
+            <p>เอกสาร HTML ประกอบด้วยส่วนหลักๆ ดังนี้:</p>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="th"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;หัวข้อของเอกสาร&lt;/title&gt;
+    &lt;style&gt;
+        /* การกำหนดสไตล์ */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;หัวเรื่องหลัก&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;หัวเรื่องรอง&lt;/h2&gt;
+            &lt;p&gt;เนื้อหาของพารากราฟ&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;ข้อมูลติดต่อ&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+
+            <h3>1. การประกาศ <code>&lt;!DOCTYPE html&gt;</code></h3>
+            <p>คำสั่งนี้ใช้เพื่อบอกเบราว์เซอร์ว่าเอกสารนี้เป็น HTML5:</p>
+            <pre>
+&lt;!DOCTYPE html&gt;
+            </pre>
+
+            <h3>2. การใช้ <code>&lt;html&gt;</code> แท็ก</h3>
+            <p>แท็กนี้ใช้เป็นแท็กหลักของเอกสาร HTML และมีแอตทริบิวต์ <code>lang</code> เพื่อระบุภาษาของเอกสาร:</p>
+            <pre>
+&lt;html lang="th"&gt;
+    ...
+&lt;/html&gt;
+            </pre>
+
+            <h3>3. การใช้ <code>&lt;head&gt;</code> และ <code>&lt;title&gt;</code></h3>
+            <p>แท็ก <code>&lt;head&gt;</code> ใช้สำหรับข้อมูลเมตาของเอกสาร เช่น ชื่อเรื่อง, การเชื่อมโยงกับไฟล์ CSS, และการกำหนดลักษณะการแสดงผลบนอุปกรณ์มือถือ:</p>
+            <pre>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;ชื่อของเอกสาร&lt;/title&gt;
+&lt;/head&gt;
+            </pre>
+
+            <h3>4. การใช้ <code>&lt;body&gt;</code></h3>
+            <p>แท็ก <code>&lt;body&gt;</code> ใช้สำหรับเนื้อหาหลักของเอกสาร เช่น หัวเรื่อง, พารากราฟ, และลิงค์:</p>
+            <pre>
+&lt;body&gt;
+    &lt;h1&gt;หัวเรื่องหลัก&lt;/h1&gt;
+    &lt;p&gt;นี่คือลิงค์ไปยัง &lt;a href="https://www.example.com"&gt;เว็บไซต์&lt;/a&gt; ของเรา&lt;/p&gt;
+&lt;/body&gt;
+            </pre>
+
+            <h3>5. การใช้ <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, และ <code>&lt;footer&gt;</code></h3>
+            <p>แท็ก <code>&lt;header&gt;</code> ใช้สำหรับส่วนหัวของเอกสาร, <code>&lt;main&gt;</code> ใช้สำหรับเนื้อหาหลัก, และ <code>&lt;footer&gt;</code> ใช้สำหรับข้อมูลติดต่อหรือข้อเสนอแนะ:</p>
+            <pre>
+&lt;header&gt;
+    &lt;h1&gt;หัวเรื่องหลัก&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;section&gt;
+        &lt;h2&gt;หัวเรื่องรอง&lt;/h2&gt;
+        &lt;p&gt;เนื้อหาของพารากราฟ&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;p&gt;ข้อมูลติดต่อ&lt;/p&gt;
+&lt;/footer&gt;
+            </pre>
+
+            <h3>6. การใช้ <code>&lt;a&gt;</code> แท็ก</h3>
+            <p>แท็ก <code>&lt;a&gt;</code> ใช้สำหรับสร้างลิงค์ไปยังหน้าเว็บหรือเอกสารอื่น:</p>
+            <pre>
+&lt;a href="https://www.example.com"&gt;ไปยังเว็บไซต์&lt;/a&gt;
+            </pre>
+
+            <h3>7. การใช้ <code>&lt;img&gt;</code> แท็ก</h3>
+            <p>แท็ก <code>&lt;img&gt;</code> ใช้สำหรับแทรกรูปภาพในเอกสาร HTML:</p>
+            <pre>
+&lt;img src="image.jpg" alt="คำบรรยายรูปภาพ"&gt;
+            </pre>
+
+            <h3>8. การใช้ <code>&lt;form&gt;</code> แท็ก</h3>
+            <p>แท็ก <code>&lt;form&gt;</code> ใช้สำหรับสร้างแบบฟอร์มที่ให้ผู้ใช้กรอกข้อมูล:</p>
+            <pre>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;ชื่อ:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;
+    &lt;input type="submit" value="ส่ง"&gt;
+&lt;/form&gt;
+            </pre>
+
+            <h3>9. การใช้ <code>&lt;table&gt;</code> แท็ก</h3>
+            <p>แท็ก <code>&lt;table&gt;</code> ใช้สำหรับสร้างตารางในเอกสาร HTML:</p>
+            <pre>
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;หัวข้อ 1&lt;/th&gt;
+            &lt;th&gt;หัวข้อ 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;ข้อมูล 1&lt;/td&gt;
+            &lt;td&gt;ข้อมูล 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+            
+            </pre>
+                    </div>
+
+                        <div class="button-container">
+                            <a href="https://www.w3schools.com/html/default.asp" >เรียนรู้เพิ่มเติมเกี่ยวกับ HTML</a>
+                        </div>
+                    
+                        <div class="button-container">
+                            <a href="file:///D:/โค๊ต/HTML/Script/Homework.html">กลับสู่หน้าแรก</a>
+                        </div>
+                    </div>
+
+</body>
+</html>
